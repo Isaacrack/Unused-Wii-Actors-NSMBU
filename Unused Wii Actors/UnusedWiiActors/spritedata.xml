@@ -1,0 +1,210 @@
+﻿<?xml version="1.0"?>
+<sprites>
+  <sprite id="177" name="4-Way Cannon" notes="A small 4-way rotating cannonball launcher.">
+    <list nybble="7" title="Camera Influence" comment="This determines how the cannonball moves relative to the camera.">
+      <entry value="0">Unaffected by Camera</entry>
+      <entry value="1">Affected by All Camera Movements</entry>
+      <entry value="2">Affected by Vertical Camera Movements</entry>
+      <entry value="3">Affected by Horizontal Camera Movements</entry>
+    </list>
+    <checkbox nybble="11.4" title="Upside-Down" comment="When enabled, the cannon is upside-down and can be placed against the ceiling."/>
+    <dualbox nybble="12.4" title1="Shoots Cardinally First" title2="Shoots Diagonally First" comment="This determines which direction the cannon will fire when it is first loaded."/>
+    <dualbox nybble="10.4" title1="Rotates Clockwise" title2="Rotates Counter-Clockwise" comment="This determines which direction the cannon will rotate." comment2="This is an aesthetic choice only, and it will not change the functionality of the cannon."/>
+        </sprite>
+  <sprite id="178" name="4-Way Large Cannon with Pipe" noyoshi="True" notes="A large 4-way rotating cannonball launcher that has a pipe in place of one of the four cannons.">
+    <list nybble="7" title="Camera Influence" comment="This determines how the cannonball moves relative to the camera.">
+      <entry value="0">Unaffected by Camera</entry>
+      <entry value="1">Affected by All Camera Movements</entry>
+      <entry value="2">Affected by Vertical Camera Movements</entry>
+      <entry value="3">Affected by Horizontal Camera Movements</entry>
+    </list>
+    <dualbox nybble="10.4" title1="Rotates Clockwise" title2="Rotates Counter-Clockwise" comment="This determines which direction the cannon and pipe will rotate."/>
+    <list nybble="12" title="Pipe Position at Load" comment="This determines the pipe's position when the cannon first loads on the screen.">
+      <entry value="0">0°</entry>
+      <entry value="1">45°</entry>
+      <entry value="2">90°</entry>
+      <entry value="3">135°</entry>
+      <entry value="4">180°</entry>
+      <entry value="5">225°</entry>
+      <entry value="6">270°</entry>
+      <entry value="7">315°</entry>
+    </list>
+    <value nybble="8-9" title="Entrance ID" comment="This determines the Entrance ID that the pipe will connect with." comment2="It does not have to be placed on the pipe. It can only be used as an exit." idtype="Entrance"/>
+    <checkbox nybble="11.4" title="Upside-Down" comment="When enabled, the cannon is upside-down and can be placed against the ceiling." advanced="True" advancedcomment="The pipe will load on the opposite side alongside a cannon, leaving a hole on one side. As such, this option should not be used."/>
+        </sprite>
+  <sprite id="189" name="Lakitu Cloud Block" notes="A block that when struck from below will spawn a Lakitu enemy that throws coins instead of Spinies.">
+    <value nybble="11" title="Maximum Coins Thrown (*5)" comment="This determines how many coins the Lakitu will throw before flying off." comment2="A value of 1 is equal to 5 coins across 15 game seconds. If set to 0, the Lakitu will never fly off."/>
+    <value nybble="12" title="Spawn Height" comment="This determines the distance relative to the bottom border of the Zone, in which the Lakitu will float upwards before it begins to throw coins." comment2="At value 0, the top of the Lakitu's shell will reach 12 blocks above the bottom Zone border. Each additional value increases this by two blocks. A value of 4 is equal to the standard height of a [134] Lakitu Spawn Area's Lakitu spawn."/>
+        </sprite>
+  <sprite id="199" name="Lighting - Glow Block" notes="A grabbable glowing block that is affected by gravity. It can be picked up and thrown by shaking the controller next to it. If it is thrown and it hits the ground, it will bounce slightly. Its effect is severely diminished as anything other than a weapon of destruction if not using Full Darkness lighting.">
+    <checkbox nybble="12" title="Do not despawn" comment="If ticked, the glow block does not despawn once it has gone off-screen." comment2="Every nonzero value has the same effect." />
+        </sprite>
+  <sprite id="202" name="Propeller Block" notes="A grabbable propeller block that is affected by gravity. It can be picked up and thrown by shaking the controller next to it. It can also boost the player into the air like a Propeller Cap if the player shakes their controller a second time while holding it. If it is thrown and it hits the ground, it will bounce slightly.">
+        </sprite>
+  <sprite id="256" name="Rotation Controlled Mushroom Block" notes="A rotation controlled mushroom block with two different sizes.">
+    <dependency notes="This block does not appear unless actually paired to a rotation controller.">
+      <suggested sprite="96"/>
+      <suggested sprite="149"/>
+    </dependency>
+    <list nybble="10" title="Type" comment="This determines the color and size of the block.">
+      <entry value="0">Red (5x5)</entry>
+      <entry value="1">Green (15x15)</entry>
+    </list>
+    <value nybble="11-12" title="Rotation ID" comment="This pairs the platform to a matching rotation controller." idtype="Rotation"/>
+        </sprite>
+  <sprite id="267" name="Giant Koopa Shell Cave" notes="A decorative large shell that can be used as a cave with the right arrangement of invisible blocks and settings.">
+    <dependency notes="Look in Retail 5-01 A1 for an example of how to use this sprite correctly. You will need to make use of Spotlight Lighting, Layer 0 tiles, and invisible collision blocks in order for it to look correct."/>
+    <checkbox nybble="12.4" title="Remove Grass/Rocks" comment="When enabled, this will remove the decoration from the bottom of the Shell Cave."/>
+        </sprite>
+  <sprite id="305" name="Poltergeist Item" notes="A haunted item that appears identical to its normal counterparts until a player either comes close enough or until they enter a specific Location.">
+    <dualbox nybble="12.4" title1="?-Block" title2="Ghost House Stand" comment="This determines which object will be haunted."/>
+    <value nybble="8-9" title="Activation Delay" comment="This determines how long after being triggered the poltergeist will wait before hurling the object at the player." comment2="If you discover the multiple of the delay value that equals one game second, let us know."/>
+    <value nybble="10-11" title="Location ID" comment="When set, the haunted object will only be activated if a player enters this location." comment2="Assigning a Location is not required. If one is not set, the item will instead be triggered by the proximity of the player." idtype="Location"/>
+        </sprite>
+  <sprite id="310" name="Ghost House Stand" notes="A decorative stand that cannot be interacted with, typically used inside Ghost House levels.">
+    <dependency notes="Including a few [262] Poltergeist Item versions of this will keep the player alert and on guard.">
+      <suggested sprite="262"/>
+    </dependency>
+        </sprite>
+  <sprite id="312" name="Line Controlled Spinning Pink Mushroom Block" notes="A large mushroom block that automatically rotates from its center point and will move along Line objects after the player touches it.">
+    <dependency notes="Line objects are required for this sprite to function. It does not interact with other terrain, and will instead continue to follow the Line guide it is connected to. As with all Line controlled sprites, it will connect to a new Line guide when it falls off of its current one, if it touches one. [???]"/>
+    <value nybble="3.2-4.4" title="Target Event ID" comment="When the mushroom block is stepped on by a player, in addition to starting to move, the Target Event ID will be activated." idtype="Target Event"/>
+    <dualbox nybble="12.4" title1="Rotates Clockwise" title2="Rotates Counter-Clockwise" comment="This determines which direction the mushroom block will rotate in."/>
+    <value nybble="9" title="Rotation Speed" comment="This determines the speed the mushroom block will rotate." comment2="The mushroom block will always rotate even at a speed value of 0."/>
+    <value nybble="10" title="Travel Speed" comment="This determines the speed the mushroom block will travel along Line objects."/>
+    <checkbox nybble="6.4" title="Bounce Back" comment="When enabled, the mushroom block will reverse its course along the Line guide when it reaches an end point." comment2="The mushroom block will always rotate in the same direction, even when traveling in reverse."/>
+    <value nybble="11" title="Unknown Value 11" advanced="True" advancedcomment="Used by Nintendo in Retail 2-06 A1 as value 7. No visible effect."/>
+        </sprite>
+  <sprite id="319" name="Move-When-On Lava Glow Metal Block" notes="A tall block with the glow of lava underneath it that will move at any point when a specified number of 'passengers' (players + enemies) are standing on it, and then moves back up to its original position when that number drops below the requirement.">
+    <list nybble="12.3-12.4" title="Size" comment="This determines the size of the block.">
+      <entry value="0">Small</entry>
+      <entry value="1">Medium</entry>
+      <entry value="2">Large</entry>
+    </list>
+    <list nybble="11" title="Moves with Passenger Number" comment="This determines how many 'passengers' are needed for the block's movement to activate." comment2="A passenger can be many things. Examples include the players themselves, Goombas and other enemies, and even loose coins created by Fire Flowers.">
+      <entry value="0">1 Passenger</entry>
+      <entry value="1">2 Passengers</entry>
+      <entry value="2">3 Passengers</entry>
+      <entry value="3">4 Passengers</entry>
+      <entry value="4">5 Passengers</entry>
+      <entry value="5">6 Passengers</entry>
+      <entry value="6">7 Passengers</entry>
+      <entry value="7">8 Passengers</entry>
+      <entry value="8">9 Passengers</entry>
+      <entry value="9">10 Passengers</entry>
+      <entry value="10">11 Passengers</entry>
+      <entry value="11">12 Passengers</entry>
+      <entry value="12">13 Passengers</entry>
+      <entry value="13">14 Passengers</entry>
+      <entry value="14">15 Passengers</entry>
+      <entry value="15">16 Passengers</entry>
+    </list>
+    <list nybble="7" title="Direction" comment="This determines which direction the block will move while moving.">
+      <entry value="0">Right</entry>
+      <entry value="1">Left</entry>
+      <entry value="2">Up</entry>
+      <entry value="3">Down</entry>
+    </list>
+    <value nybble="8" title="Speed" comment="This determines how quickly the block will move while moving."/>
+        </sprite>
+  <sprite id="345" name="Tilt Controlled Girder" notes="This is the Tilt Controlled Girder (Beam) platform that is assigned to the first player to touch it. That player will maintain tilt control for as long as they are touching it.">
+        </sprite>
+  <sprite id="355" name="Rolling Hill - 1 Pipe" noyoshi="True" yoshinotes="Yoshi cannot enter the pipe." notes="A rotating circle with one pipe in it that has the same general appearance as the standard Grass or Underground tilesets.">
+    <dependency notes="A functioning entrance is required to be associated with the Rolling Hill or the game will crash. Also, the underside of a Rolling Hill does NOT have collision. Do not place a Rolling Hill in any situation where the player would have contact with the bottom 50% of the hill."/>
+    <dualbox nybble="7.4" title1="Grassland" title2="Underground" comment="This determines which texture the Rolling Hill will use."/>
+    <list nybble="6" title="Starting Rotation" comment="This determines the initial angle the hill spawns at before spinning. It measures clockwise.">
+      <entry value="0">0.0°</entry>
+      <entry value="1">22.5°</entry>
+      <entry value="2">45.0°</entry>
+      <entry value="3">67.5°</entry>
+      <entry value="4">90.0°</entry>
+      <entry value="5">112.5°</entry>
+      <entry value="6">135.0°</entry>
+      <entry value="7">157.5°</entry>
+      <entry value="8">180.0°</entry>
+      <entry value="9">202.5°</entry>
+      <entry value="10">225.0°</entry>
+      <entry value="11">247.5°</entry>
+      <entry value="12">270.0°</entry>
+      <entry value="13">292.5°</entry>
+      <entry value="14">315.0°</entry>
+      <entry value="15">337.5°</entry>
+    </list>
+    <value nybble="11" title="Speed" comment="This determines the rotation speed of the Rolling Hill. A value of 5 matches Mario's running speed, so use of higher values isn't recommended."/>
+    <dualbox nybble="12.4" title1="Rotates Counter-Clockwise" title2="Rotates Clockwise" comment="This determines which direction the Rolling Hill rolls."/>
+    <value nybble="8" title="Z-Order" comment="This will adjust the Z-Order of the Rolling Hill in relation to other Rolling Hills." comment2="If you have multiple Rolling Hills overlapping each other, you must use this setting to prevent graphical glitches. Rolling Hills with a higher Z-Order number will show behind those with a lower number."/>
+    <value nybble="10" title="Entrance ID" comment="This determines the Entrance ID that the pipe will connect with." comment2="It does not have to be placed on the pipe. It can only be used as an exit." idtype="Entrance"/>
+        </sprite>
+  <sprite id="358" name="Bolt Controlled Airship Platform" notes="An airship platform that can also be made to move by spinning a Bolt. It can only move in a downwards direction.">
+    <dependency notes="This platform is intended to function as a pair with two [470] Airship Platform Wires. Additionally, it must be paired to a [315] Bolt in order to function.">
+      <required sprite="315"/>
+      <suggested sprite="470"/>
+    </dependency>
+    <value nybble="5" title="Bolt ID" comment="This pairs the platform with a matching Bolt." idtype="Bolt"/>
+    <checkbox nybble="10.4" title="Moves from Bolt" comment="When enabled, the metal block will move when the matching Bolt is spun." comment2="The platform can only be made to move downwards."/>
+    <list nybble="12" title="Width" comment="This determines the width of the platform.">
+      <entry value="0">2 Blocks</entry>
+      <entry value="1">3 Blocks</entry>
+      <entry value="2">4 Blocks</entry>
+      <entry value="3">5 Blocks</entry>
+      <entry value="4">6 Blocks</entry>
+      <entry value="5">7 Blocks</entry>
+      <entry value="6">8 Blocks</entry>
+      <entry value="7">9 Blocks</entry>
+      <entry value="8">10 Blocks</entry>
+      <entry value="9">11 Blocks</entry>
+      <entry value="10">12 Blocks</entry>
+      <entry value="11">13 Blocks</entry>
+      <entry value="12">14 Blocks</entry>
+      <entry value="13">15 Blocks</entry>
+      <entry value="14">16 Blocks</entry>
+      <entry value="15">17 Blocks</entry>
+    </list>
+        </sprite>
+  <sprite id="360" name="Bolt Controlled Airship Platform Wire" notes="A wire that matches the motif of the Airship Platform that can be made to move by spinning a Bolt. It can only move in a downwards direction.">
+    <dependency notes="Two of these decorative wires are intended to function as a pair with the [469] Airship Platform. Additionally, it must be paired to a [315] Bolt in order to function.">
+      <required sprite="315"/>
+      <suggested sprite="469"/>
+    </dependency>
+    <value nybble="5" title="Bolt ID" comment="This pairs the wire with a matching Bolt." idtype="Bolt"/>
+    <checkbox nybble="10.4" title="Moves from Bolt" comment="Check this to cause the Sprite to move when the Bolt is spun."/>
+        </sprite>
+  <sprite id="376" name="Silver Gear Block - Two Way Line" notes="A large rectangular block with a silver gear motif as decoration. It can only be paired for Two Way Line movement. If linked with an Event Activated Two Way Line controller, the Silver Gear Block will only spawn when the event is activated.">
+    <dependency notes="This block must be paired with a [260] Two Way Line movement controller in order to spawn and function. ID 0 works with this sprite.">
+      <required sprite="260"/>
+    </dependency>
+    <value nybble="5-6" title="Two Way Line ID" comment="This pairs the block to a matching Two Way Line movement controller." idtype="Two Way Line"/>
+    <list nybble="12" title="Size" comment="">
+      <entry value="1">Thin (4x9)</entry>
+      <entry value="0">Single (7x9)</entry>
+      <entry value="3">Wide (8x9)</entry>
+      <entry value="2">Double (14x9)</entry>
+    </list>
+    <checkbox nybble="11" title="Upside-Down" comment="Flips the block upside down. This doesn't affect its movement."/>
+        </sprite>
+  <sprite id="377" name="Moving Light Gem Block" notes="A small block with a triangular gem in it that lights up just before it moves from its starting position, and then deactivates instantly when it begins to move back.">
+    <list nybble="6" title="Initial Direction" comment="This determines the initial direction the block will travel. The block's gem will light up when travelling in this direction.">
+      <entry value="0">Up</entry>
+      <entry value="1">Down</entry>
+    </list>
+    <value nybble="7" title="Delay Before Movement" comment="This determines how long the block will wait before making its outwards movement." comment2="Each value is equal to two game seconds."/>
+    <value nybble="9" title="Distance"/>
+    <value nybble="8" title="Delay Before Return" comment="This determines how long the block will wait before making its return movement." comment2="Each value is equal to two game seconds."/>
+    <list nybble="10.3-10.4" title="Speed">
+      <entry value="0">Very Slow</entry>
+      <entry value="1">Slow</entry>
+      <entry value="2">Normal</entry>
+      <entry value="3">Fast</entry>
+    </list>
+        </sprite>
+  <sprite id="522" name="Floating Barrel" noyoshi="True" notes="A floating barrel that can only be placed on a liquid surface. It will sink while a player is standing on it, but will pop back up once the player jumps off. The barrel can also flow with the unused water current controller.">
+    <dependency notes="The Floating Barrel will not load when placed on the same screen as an entrance. Place the Floating Barrel where you want it to load using the liquid line, and it will spawn floating at the surface line of that body of liquid. It only works with non-Location liquids, and it does work with Moving liquids when placed correctly. Unlike Floating Coins / ? Blocks, it will also function with Rising/Falling Water. Lastly, it should be noted that the visual splash effect is always made of water.">
+      <suggested sprite="138"/>
+      <suggested sprite="139"/>
+      <suggested sprite="216"/>
+      <suggested sprite="285"/>
+    </dependency>
+    <checkbox nybble="5.1" title="Initially Submerged" comment="When enabled, the floating barrel will load partially submerged."/>
+        </sprite>
+  <sprite id="529" name="Crowber">
+</sprites>
