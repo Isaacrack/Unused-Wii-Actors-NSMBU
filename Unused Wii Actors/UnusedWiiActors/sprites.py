@@ -4,7 +4,6 @@
 
 
 
-
 from PyQt5 import QtCore, QtGui
 Qt = QtCore.Qt
 
@@ -13,7 +12,6 @@ import spritelib as SLib
 
 
 ImageCache = SLib.ImageCache
-
 
 
 
@@ -40,7 +38,6 @@ class SpriteImage_RotCannon(SLib.SpriteImage_StaticMultiple):  # 177
 
 
 
-
 class SpriteImage_RotCannonPipe(SLib.SpriteImage_StaticMultiple):  # 178
     @staticmethod
     def loadImages():
@@ -64,7 +61,6 @@ class SpriteImage_RotCannonPipe(SLib.SpriteImage_StaticMultiple):  # 178
 
 
 
-
 class SpriteImage_CloudBlock(SLib.SpriteImage_Static):  # 189
     def __init__(self, parent):
         super().__init__(
@@ -78,7 +74,6 @@ class SpriteImage_CloudBlock(SLib.SpriteImage_Static):  # 189
     @staticmethod
     def loadImages():
         SLib.loadIfNotInImageCache('CloudBlock', 'cloud_block.png')
-
 
 
 
@@ -99,7 +94,6 @@ class SpriteImage_GlowBlock(SLib.SpriteImage):  # 199
 
 
 
-
 class SpriteImage_PropellerBlock(SLib.SpriteImage_Static):  # 202
     def __init__(self, parent):
         super().__init__(
@@ -113,7 +107,6 @@ class SpriteImage_PropellerBlock(SLib.SpriteImage_Static):  # 202
     @staticmethod
     def loadImages():
         SLib.loadIfNotInImageCache('PropellerBlock', 'propeller_block.png')
-
 
 
 
@@ -135,7 +128,6 @@ class SpriteImage_CubeKinokoRot(SLib.SpriteImage_StaticMultiple):  # 256
 
 
         super().dataChanged()
-
 
 
 
@@ -162,7 +154,6 @@ class SpriteImage_BigShell(SLib.SpriteImage_StaticMultiple):  # 267
 
 
         super().dataChanged()
-
 
 
 
@@ -229,7 +220,6 @@ class SpriteImage_PoltergeistItem(SLib.SpriteImage):  # 305
 
 
 
-
 class SpriteImage_GhostHouseStand(SLib.SpriteImage_Static):  # 310
     def __init__(self, parent):
         super().__init__(
@@ -246,7 +236,6 @@ class SpriteImage_GhostHouseStand(SLib.SpriteImage_Static):  # 310
 
 
 
-
 class SpriteImage_CubeKinokoLine(SLib.SpriteImage_Static):  # 312
     def __init__(self, parent):
         super().__init__(
@@ -259,7 +248,6 @@ class SpriteImage_CubeKinokoLine(SLib.SpriteImage_Static):  # 312
     @staticmethod
     def loadImages():
         SLib.loadIfNotInImageCache('CubeKinokoP', 'cube_kinoko_p.png')
-
 
 
 
@@ -281,7 +269,6 @@ class SpriteImage_MoveWhenOnMetalLavaBlock(SLib.SpriteImage_StaticMultiple):  # 
 
 
 
-
 class SpriteImage_TiltingGirder(SLib.SpriteImage_Static):  # 345
     def __init__(self, parent):
         super().__init__(
@@ -298,10 +285,8 @@ class SpriteImage_TiltingGirder(SLib.SpriteImage_Static):  # 345
 
 
 
-
 class SpriteImage_RollingHillWith1Pipe(SpriteImage_RollingHillWithPipe):  # 355
     pass
-
 
 
 
@@ -338,7 +323,6 @@ class SpriteImage_BoltPlatform(SLib.SpriteImage):  # 358
 
 
 
-
 class SpriteImage_BoltPlatformWire(SLib.SpriteImage_Static):  # 360
     def __init__(self, parent):
         super().__init__(
@@ -352,7 +336,6 @@ class SpriteImage_BoltPlatformWire(SLib.SpriteImage_Static):  # 360
     @staticmethod
     def loadImages():
         SLib.loadIfNotInImageCache('BoltPlatformWire', 'bolt_platform_wire.png')
-
 
 
 
@@ -378,7 +361,6 @@ class SpriteImage_SilverGearBlock(SLib.SpriteImage_StaticMultiple):  # 376
 
 
         super().dataChanged()
-
 
 
 
@@ -412,7 +394,6 @@ class SpriteImage_MovingGemBlock(SLib.SpriteImage_Static):  # 377
 
 
         super().dataChanged()
-
 
 
 
@@ -453,7 +434,6 @@ class SpriteImage_FloatingBarrel(SLib.SpriteImage_Static):  # 522
 
 
 
-
 class SpriteImage_Crow(SLib.SpriteImage_Static):  # 529
     def __init__(self, parent):
         super().__init__(
@@ -467,9 +447,6 @@ class SpriteImage_Crow(SLib.SpriteImage_Static):  # 529
     @staticmethod
     def loadImages():
         SLib.loadIfNotInImageCache('Crow', 'crow.png')
-
-
-
 
 
 
